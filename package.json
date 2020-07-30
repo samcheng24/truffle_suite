@@ -1,0 +1,34 @@
+{
+  "name": "truffle_suite",
+  "version": "1.0.0",
+  "description": "Sams testing suite",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samcheng24/truffle_suite.git"
+  },
+  "author": "Sam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samcheng24/truffle_suite/issues"
+  },
+  "homepage": "https://github.com/samcheng24/truffle_suite#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1"
+  },
+  "dependencies": {
+    "ansicolor": "^1.1.71",
+    "axios": "^0.17.1",
+    "dotenv": "^4.0.0",
+    "ethereumjs-tx": "^1.3.3",
+    "ololog": "^1.1.84",
+    "web3": "^0.20.4"
+  }
+}
