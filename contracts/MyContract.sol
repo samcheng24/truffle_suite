@@ -4,14 +4,11 @@ pragma solidity >= 0.5.0 < 0.7.0;
 contract MyContract {
   string message;
   
-  constructor() public {
-  }
-  
-  function MyContract(string myMessage) {
+  constructor(string memory myMessage) public {
     message = myMessage;
   }
   
-  function getMessage() constant returns(string) {
+  function getMessage() public view returns(string memory) {
     return message;
   }
 }
