@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --timeout 60000",
+    "test:browser": "live-server --port=9000 --mount=/:public"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,12 @@
   },
   "homepage": "https://github.com/samcheng24/truffle_suite#readme",
   "devDependencies": {
+    "await-transaction-mined": "^1.0.12",
     "chai": "^4.2.0",
-    "mocha": "^8.0.1"
+    "live-server": "^1.2.1",
+    "mocha": "^8.0.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "thread-sleep": "^2.2.0"
   },
   "dependencies": {
     "ansicolor": "^1.1.71",

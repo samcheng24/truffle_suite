@@ -15,11 +15,15 @@ Update env settings in `.env` file
 Update params in `index.js`
   * amountToSend -- amount to transact // Move to config file!
 
-## Transacting Manually
-Command -- `node app.js`
+## Processing Manual Transactions
+Command -- `node index.js`
 
-## Running tests
-Command -- `mocha test/transactionTest.js`
+## Test Commands
+
+| Description | Command |
+|------|----|
+| Running tests | `npm run test` |
+| Live server | `npm run test:browser` |
 
 # Useful Links
 Metamask Wallet: chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#
