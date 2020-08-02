@@ -21,7 +21,7 @@ describe('#mySandboxSuite()', function(){ // Function Name
         //     // test case 2 ...
         // })
 
-        it('testingFunctions', async function(){
+        // it('testingFunctions', async function(){
             // const transactionId = '0x7c890caf9e926576433cb014668abf44a11be8186d1091995eade4e0cf0273be'
             // const minedTxReceipt = await awaitTransactionMined.awaitTx(web3, transactionId)
 
@@ -35,6 +35,6 @@ describe('#mySandboxSuite()', function(){ // Function Name
             // var end = Date.now();
             // // res is the actual time that we slept for
             // console.log(res + ' ~= ' + (end - start) + ' ~= 1000');
-        })
+        // })
     })
 });

@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "mocha --timeout 60000",
+    "test:report": "mocha --timeout 60000 --reporter mochawesome",
     "test:browser": "live-server --port=9000 --mount=/:public"
   },
   "repository": {
@@ -25,7 +27,7 @@
     "chai": "^4.2.0",
     "live-server": "^1.2.1",
     "mocha": "^8.0.1",
-    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.1.1",
     "thread-sleep": "^2.2.0"
   },
   "dependencies": {

@@ -11,22 +11,38 @@
 </head>
 
 <body>
+  <script src="node_modules/mocha/mocha.js"></script>
+  <script src="node_modules/chai/chai.js"></script>
+  <!-- <script src="../blockUtils.js"></script> -->
+  <script>mocha.setup('bdd')</script> <!--Setup Mocha to use the BDD interface-->
+
   <div id="mocha"></div>
-    <script src="http://chaijs.com/chai.js"></script> <!-- Add the Chai assertion library -->
-    
-    <!-- Add the Mocha test library -->
-    <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
-    
     <script>
         // Set chai.expect as a global variable
         var expect = chai.expect;
-        
-        // Setup Mocha to use the BDD interface
-        mocha.setup('bdd');
+        require('dotenv').config()
+
+        var Web3 = require('web3')
+        var blockUtils = require('../blockUtils.js')
+        var awaitTransactionMined = require ('await-transaction-mined');
+
+        // Define Wallets
+        var wallet1 = process.env.SRC_WALLET_ADDRESS
+        var wallet1key = process.env.SRC_WALLET_PRIVATE_KEY
+        var wallet2 = process.env.DEST_WALLET_ADDRESS
+        var wallet2key = process.env.DEST_WALLET_PRIVATE_KEY
+
+        // Define network -- Testnet Ropsten
+        var testnet = `https://ropsten.infura.io/v3/${process.env.INFURA_ROPSTEN_ACCESS_TOKEN}`
+        var web3 = new Web3( new Web3.providers.HttpProvider(testnet) )
     </script>
     
-    <!-- Import Transaction tests -->
-    <script src="../test/transactionTest.js"></script>
+    <!-- Run mySandbox tests -->
+      <script src="../blockUtils.js"></script>
+      <script src="../test/index.test.js"></script>
+
+    <!-- Run mySandbox tests -->
+      <script src="../test/mySandBox.test.js"></script>
 
     <!-- LEARNING: Import the sum + testsfunction -->
         <script src="/sum.js"></script>
